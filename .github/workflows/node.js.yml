@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment: 
-      name: prod
-      url: https://github.com/choninoa/musala
+      name: github-pages
+      url: https://github.com
     strategy:
       matrix:
         node-version: [16.x]
