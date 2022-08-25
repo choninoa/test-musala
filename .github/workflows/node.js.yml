@@ -35,5 +35,4 @@ jobs:
         CI: true
     - name: Run Start
       run: npm start
-      env:
-        CI: true
+      
