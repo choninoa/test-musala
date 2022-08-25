@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: 
+      name: prod
+      url: https://github.com/choninoa/musala
     strategy:
       matrix:
         node-version: [16.x]
@@ -33,13 +36,7 @@ jobs:
       run: npm test
       env:
         CI: true    
-  deployment:
-    runs-on: ubuntu-latest
-    environment: 
-      name: prod
-      url: https://github.com
-    steps:
-     - name: Run Start
-       run:  npm start
-       env:
+    - name: Run Start
+      run:  npm start
+      env:
         CI: true
