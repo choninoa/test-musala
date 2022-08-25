@@ -33,7 +33,14 @@ jobs:
       run: npm test
       env:
         CI: true
-    - name: Run Start
+    
+  deployment:
+    runs-on: ubuntu-latest
+    environment: 
+      name: prod
+      url: https://github.com
+    steps:
+     - name: Run Start
       run: npm start
       env:
         CI: true
