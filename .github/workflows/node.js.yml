@@ -31,6 +31,6 @@ jobs:
 
     - name: Run tests
       run: npm test
-      run: npm run start:prod
+      run: npm start
       env:
         CI: true
