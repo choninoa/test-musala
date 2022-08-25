@@ -9,7 +9,7 @@ import { AppService } from './app.service';
   imports: [ConfigModule.forRoot({
     isGlobal: true,
   }),
-  MongooseModule.forRoot(process.env.MONGO_URI)],
+  MongooseModule.forRoot(process.env.MONGO_URI ||'mongodb://localhost/musala')],
   controllers: [AppController],
   providers: [AppService],
 })
