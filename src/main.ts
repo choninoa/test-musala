@@ -17,7 +17,7 @@ async function bootstrap() {
   );   
     
   app.enableCors();
-  const version='v.220819.0003'
+  const version='v.220825.1212'
   const options = new DocumentBuilder()
     .setTitle('Musala-Test  - API Documentation')
     .setDescription('The documentation')
