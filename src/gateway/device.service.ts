@@ -2,13 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CService } from 'src/generic/crud.service';
+import { Device } from './schemas/device.schema';
 import { Gateway } from './schemas/gateway.schema';
 
 @Injectable()
-export class GatewayService extends CService<Gateway> {
+export class DeviceService extends CService<Device> {
     constructor(
-        @InjectModel(Gateway.name) private gatewayModel: Model<Gateway & Document>
+        @InjectModel(Gateway.name) private deviceModel: Model<Device & Document>
     ) {
-        super(gatewayModel);
+        super(deviceModel);
     }
 }

@@ -12,12 +12,13 @@ async function bootstrap() {
     new ValidationPipe({
       transform: true,
       whitelist: true,
-      forbidNonWhitelisted: true
+      forbidNonWhitelisted: true,
+      transformOptions:{enableImplicitConversion:true}
     }),
   );   
     
   app.enableCors();
-  const version='v.220825.1212'
+  const version='v.220826.1417'
   const options = new DocumentBuilder()
     .setTitle('Musala-Test  - API Documentation')
     .setDescription('The documentation')
@@ -30,9 +31,6 @@ async function bootstrap() {
     app,
     document,
   );
-
- 
-  
   
   const port = configService.get<string>('PORT')||6000;
   await app.listen(port);
