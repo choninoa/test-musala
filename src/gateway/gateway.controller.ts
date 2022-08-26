@@ -1,7 +1,7 @@
 import { BadRequestException, Body, Controller, Get, HttpStatus, Inject, Post, Query, Res } from '@nestjs/common';
 import { ApiBadRequestResponse, ApiCreatedResponse, ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { type } from 'os';
-import { IntervalDto } from 'src/generic/interval.dto';
+import { IntervalDto } from '../generic/interval.dto';
 import { CreateGatewayDto } from './dtos/create-gateway.dto';
 import { ExistElementDto } from './dtos/exists.gateway.dto';
 import { GatewayService } from './gateway.service';

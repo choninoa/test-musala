@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { CService } from 'src/generic/crud.service';
+import { CService } from '../generic/crud.service';
 import { Gateway } from './schemas/gateway.schema';
 
 @Injectable()
