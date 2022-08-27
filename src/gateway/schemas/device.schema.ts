@@ -26,7 +26,7 @@ export class Device {
     status:DeviceStatusEnum;
 
     @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Gateway' })
-    owner: Gateway;
+    gateway: Gateway;
 
     createdAt?: Date;
 

@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Device, DeviceSchema } from './schemas/device.schema';
 import { Gateway, GatewaySchema } from './schemas/gateway.schema';
 import { DeviceService } from './device.service';
+import { DeviceController } from './device.controller';
 
 @Module({
   imports: [MongooseModule.forFeature([
@@ -13,6 +14,6 @@ import { DeviceService } from './device.service';
   
   ])],
   providers: [GatewayService,DeviceService],
-  controllers: [GatewayController]
+  controllers: [GatewayController,DeviceController]
 })
 export class GatewayModule {}
