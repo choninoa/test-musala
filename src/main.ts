@@ -18,10 +18,10 @@ async function bootstrap() {
   );   
     
   app.enableCors();
-  const version='v.220827.0146'
+  const version='v.220829.0938'
   const options = new DocumentBuilder()
     .setTitle('Musala-Test  - API Documentation')
-    .setDescription('The documentation')
+    .setDescription('Gateways Problem')
     .setVersion(version)
     .build();
 

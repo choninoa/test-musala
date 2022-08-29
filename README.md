@@ -33,7 +33,9 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-
+## Api - Documentation
+- When app is online you can see api and test it accesing [root-url]/api
+- The file named [.env.template] is the example how to create [.env] config file.
 
 ## Stay in touch
 
