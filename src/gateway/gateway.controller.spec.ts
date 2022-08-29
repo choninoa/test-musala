@@ -7,7 +7,7 @@ import { Gateway } from './schemas/gateway.schema';
 
 describe('GatewayController', () => {
   let controller: GatewayController;
-
+ 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [GatewayController],
@@ -24,4 +24,7 @@ describe('GatewayController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+ 
+
 });
