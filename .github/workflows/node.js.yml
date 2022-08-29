@@ -41,7 +41,7 @@ jobs:
       env:
         CI: true  
     - name: Run e2e tests
-      run: npm e2e
+      run: npm run e2e
       env:
         CI: true   
    # - name: Run Start
