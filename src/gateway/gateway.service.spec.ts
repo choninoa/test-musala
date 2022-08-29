@@ -1,5 +1,6 @@
 import { getModelToken, MongooseModule } from '@nestjs/mongoose';
 import { Test, TestingModule } from '@nestjs/testing';
+import mongoose from 'mongoose';
 import { GatewayService } from './gateway.service';
 import { Device, DeviceSchema } from './schemas/device.schema';
 import { Gateway, GatewaySchema } from './schemas/gateway.schema';
@@ -11,6 +12,9 @@ describe('GatewayService', () => {
     name: 'Test GateWay',
     ipv4: '192.168.2.1'
   }
+  beforeAll(done => {
+    done()
+  });
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
@@ -69,5 +73,9 @@ describe('GatewayService', () => {
 
   });
  
- 
+  afterAll(done => {
+    // Closing the DB connection allows Jest to exit successfully.
+    mongoose.connection.close()
+    done()
+  })
 });
